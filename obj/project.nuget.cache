@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AnM3GFoAsKY=",
+  "success": true,
+  "projectFilePath": "/Users/rgarcia/Documents/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/actividad01.csproj",
+  "expectedPackageFiles": [
+    "/Users/rgarcia/.nuget/packages/bootstrap/5.3.8/bootstrap.5.3.8.nupkg.sha512"
+  ],
+  "logs": []
+}

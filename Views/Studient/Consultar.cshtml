@@ -1,0 +1,47 @@
+@model IEnumerable<actividad01.Models.AlumnoDireccionViewModel>
+@{
+  int index = 1;
+}
+
+<div class="mt-3 row">
+  <div class="col-sm-12 col-md-6">
+    <h4>Listado de alumnos</h4>
+  </div>
+  <div class="col-sm-12 col-md-6 text-end">
+    <a class="btn btn-sm btn-outline-primary" aria-current="page" asp-controller="Studient" asp-action="Register">
+      Crear alumno
+    </a>
+  </div>
+  <div class="col-sm-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">No.Control</th>
+          <th scope="col">Calle</th>
+          <th scope="col">C.P</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach (AlumnoDireccionViewModel vm in Model)
+        {
+          <tr>
+            <th scope="row">@index</th>
+            <td>@vm.Alumno!.Nombre</td>
+            <td>@vm.Alumno!.NoControl</td>
+            <td>@vm.Direccion!.Calle</td>
+            <td>@vm.Direccion!.CP</td>
+            <td>
+              <a class="btn btn-sm btn-outline-danger" aria-current="page" asp-controller="Studient" asp-route-id="@vm.Alumno!.NoControl" asp-action="Eliminar">
+                Eliminar
+              </a>
+            </td>
+          </tr>
+          index++;
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
