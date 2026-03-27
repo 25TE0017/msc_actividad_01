@@ -1,0 +1,57 @@
+@model IEnumerable<actividad01.Models.Alumno>
+@{
+    int index = 1;
+}
+
+<div class="mt-3 row">
+    <div class="col-sm-12 col-md-6">
+        <h4>Listado de alumnos</h4>
+    </div>
+    <div class="col-sm-12 col-md-6 text-end">
+        <a class="btn btn-sm btn-outline-primary" asp-controller="Alumno" asp-action="Create">
+            Crear alumno
+        </a>
+    </div>
+    
+    <div class="col-sm-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>No.Control</th>
+                    <th align="center">Carrera</th>
+                    <th align="center">Semestre</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Alumno vm in Model)
+                {
+                    <tr>
+                        <td scope="row">@index</td>
+                        <td>@vm.NoControl</td>
+                        <td>@vm.Nombre</td>
+                        <td align="center">@vm.Carrera</td>
+                        <td align="center">@vm.Semestre</td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-warning" 
+                                asp-controller="Alumno" 
+                                asp-route-NoControl="@vm.NoControl" 
+                                asp-action="Update">
+                                Actualizar
+                            </a>
+                            <a class="btn btn-sm btn-outline-danger" 
+                                asp-controller="Alumno" 
+                                asp-route-NoControl="@vm.NoControl" 
+                                asp-action="Destroy">
+                                Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                    index++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

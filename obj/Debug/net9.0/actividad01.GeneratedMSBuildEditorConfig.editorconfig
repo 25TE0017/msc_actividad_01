@@ -1,0 +1,133 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = actividad01
+build_property.RootNamespace = actividad01
+build_property.ProjectDir = /Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Alumno/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWx1bW5vL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Alumno/Destroy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWx1bW5vL0Rlc3Ryb3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Alumno/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWx1bW5vL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Alumno/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWx1bW5vL1VwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Archivo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2by9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Archivo/Destroy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2by9EZXN0cm95LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Archivo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXJjaGl2by9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Mantenimiento/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFudGVuaW1pZW50by9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Mantenimiento/Destroy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFudGVuaW1pZW50by9EZXN0cm95LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Mantenimiento/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFudGVuaW1pZW50by9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Mantenimiento/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFudGVuaW1pZW50by9VcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Map/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFwL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Studient/Consultar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGllbnQvQ29uc3VsdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Studient/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGllbnQvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Studient/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGllbnQvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Studient/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGllbnQvUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Studient/SubmitData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGllbnQvU3VibWl0RGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Studient/Validar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGllbnQvVmFsaWRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/M3Pro/Maestria/Semestre II/Modelo conceptal de aplicacion web/proyectos/actividad01/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-4u8cse14z3

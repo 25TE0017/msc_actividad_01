@@ -1,0 +1,165 @@
+<div class="mt-3 row gap-2">
+    <div class="col-sm-12">
+        <h4>About JS</h4>
+    </div>
+
+    <div class="col-sm-12">
+        <span id="span-name">Ricardo Garcia</span>
+        <input id="txt" type="text">
+        <ul>
+            <li>Programación</li>
+            <li class="materiaEspecialidad">Robotica</li>
+            <li class="materiaEspecialidad">Redes</li>
+            <li>IA</li>
+        </ul>
+
+        <button
+            id="onClick"
+            class="btn btn-sm btn-primary"
+            onclick="mostrarSaludo()"
+        >
+            onClick
+        </button>
+
+        <button
+            id="btnMostrar"
+            class="btn btn-sm btn-primary"
+        >
+            Mostrar
+        </button>
+    </div>
+
+    <div
+        class="col-sm-12"
+    >
+        <input id="txtF1" type="text">
+        <div id="contenedor"></div>
+        <button
+            id="addBtn"
+            class="btn btn-sm btn-primary"
+        >
+            Agregar
+        </button>
+    </div>
+
+    <div
+        class="col-sm-12"
+    >
+        <button
+            id="apiBtnSincrona"
+            class="btn btn-sm btn-primary"
+        >
+            Sincrona
+        </button>
+
+        <button
+            id="apiBtnAsincrona"
+            class="btn btn-sm btn-primary"
+        >
+            Asincrona
+        </button>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        console.log("About JS");
+        const url = "https://service.nefintec.mx/api/users";
+
+        const btn = document.getElementById("btnMostrar");
+        console.log(btn);
+        const addBtn = document.getElementById("addBtn");
+        console.log(addBtn);
+
+        @* btn.addEventListener("click", mostrarSaludo) *@
+        btn.addEventListener("click", function(){
+            console.log("Función");
+        })
+        btn.addEventListener("click", () => {
+            console.log("Función de flecha o anonimas");
+        })
+
+        addBtn.addEventListener("click", () => {
+            const p = document.createElement("p");
+            const value = document.getElementById("txtF1").value;
+            if (value.length === 0) return alert("Esta vacio...");
+            p.innerText = value;
+            document.getElementById("contenedor").appendChild(p);
+            document.getElementById("txtF1").value = "";
+        });
+
+        const apiBtnSincrona = document.getElementById("apiBtnSincrona");
+        apiBtnSincrona.addEventListener("click", () => {
+            apiBtnSincrona.textContent = "Conectado...";
+            const url = "https://service.nefintec.mx/api/users";
+            
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                apiBtnSincrona.textContent = "200: Network";
+                console.log(data);
+            })
+            .catch((err) => {
+                apiBtnSincrona.textContent = "500: Network";
+                console.log(err)
+            });
+
+            setTimeout(() => {
+                apiBtnSincrona.textContent = "Sincrona";
+            }, 10000)
+        });
+
+        const apiBtnAsincrona = document.getElementById("apiBtnAsincrona");
+        apiBtnAsincrona.addEventListener("click", conectionApi);
+        const conectionApi = async () => {
+            apiBtnAsincrona.textContent = "Conectado...";
+            
+            await fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                apiBtnAsincrona.textContent = "200: Network";
+                console.log(data);
+            })
+            .catch((err) => {
+                apiBtnAsincrona.textContent = "500: Network";
+                console.log(err)
+            });
+
+            setTimeout(() => {
+                apiBtnAsincrona.textContent = "Asincrona";
+            }, 10000)
+        }
+        
+        const mostrarSaludo = () => {
+            @* Buscar elemento especifico por el id *@
+            const span = document.getElementById("span-name")
+            console.log(span)
+            console.log(span.textContent)
+
+            @* Buscar elemento especifico por el id *@
+            const input = document.getElementById("txt")
+            console.log(input)
+            console.log(input.value)
+            input.value = "Cadillac"
+
+            const byClass = document.getElementsByClassName("materiaEspecialidad");
+            console.log(byClass)
+            console.log(byClass[0].textContent)
+
+            for (let li of byClass) {
+                console.log(li)
+                console.log(li.textContent)
+            }
+
+            const byTags = document.getElementsByTagName("li");
+            console.log(byTags)
+
+            for (let i = 0; i < byTags.length; i++){
+                console.log(byTags[i].textContent)
+            }
+        };
+
+
+
+    </script>
+}

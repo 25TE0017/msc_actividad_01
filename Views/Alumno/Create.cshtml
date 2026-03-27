@@ -1,0 +1,57 @@
+@model actividad01.Models.Alumno
+
+<div class="mt-3 row">
+    <div class="col-sm-12 col-md-6">
+        <h4>Registro de alumno</h4>
+    </div>
+    <div class="col-sm-12 col-md-6 text-end">
+        <a class="btn btn-sm btn-outline-primary" aria-current="page" asp-controller="Alumno" asp-action="Index">
+            Ver listado
+        </a>
+    </div>
+    <div class="col-sm-12 col-md-12 mt-5">
+        <form
+            asp-action="Create"
+            asp-controller="Alumno"
+            mathod="post"
+        >
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Datos</h4>
+                </div>
+                <div class="mb-3 col-sm-12 col-md-6">
+                    <label class="form-label">NoControl</label>
+                    <input type="text" class="form-control" id="NoControl" name="NoControl" asp-for="NoControl">
+                    <span asp-validation-for="NoControl" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 col-sm-12 col-md-6">
+                    <label class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" id="Nombre" name="Nombre" asp-for="Nombre">
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 col-sm-12 col-md-6">
+                    <label class="form-label">Carrera</label>
+                    <input type="text" class="form-control" id="Carrera" name="Carrera" asp-for="Carrera">
+                    <span asp-validation-for="Carrera" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 col-sm-12 col-md-6">
+                    <label class="form-label">Semestre</label>
+                    <input type="text" class="form-control" id="Semestre" name="Semestre" asp-for="Semestre">
+                    <span asp-validation-for="Semestre" class="text-danger"></span>
+                </div>
+
+                <div class="col-sm-12 text-end">
+                    <button
+                        type="submit"
+                        class="btn btn-sm btn-outline-primary"
+                    >
+                        Registrar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

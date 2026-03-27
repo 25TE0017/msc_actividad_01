@@ -6,54 +6,38 @@
     <title>@ViewData["Title"] - Actividad 01</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
     @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/actividad01.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
-    @* <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ACT01</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Studient" asp-action="Login">Studient</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header> *@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index">Navbar</a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">App MVC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    @* <li class="nav-item">
                         <a class="nav-link active" aria-current="page" asp-controller="Studient" asp-action="Login">Login</a>
-                    </li>
+                    </li>*@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
+                            Modulos
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            @* <li><a class="dropdown-item" aria-current="page" asp-controller="Studient" asp-action="Login">Login</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" aria-current="page" asp-controller="Alumno" asp-action="Index">Alumno</a></li>
+                            <li><a class="dropdown-item" aria-current="page" asp-controller="Mantenimiento" asp-action="Index">Mantenimiento</a></li>
+                            <li><a class="dropdown-item" aria-current="page" asp-controller="Home" asp-action="About">About</a></li>
+                            <li><a class="dropdown-item" aria-current="page" asp-controller="Socket" asp-action="Index">Socket</a></li> *@
+                            <li><a class="dropdown-item" aria-current="page" asp-controller="Archivo" asp-action="Index">Archivo</a></li>
+                            <li><a class="dropdown-item" aria-current="page" asp-controller="Map" asp-action="Index">Map</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -76,6 +60,9 @@
         </div>
     </footer>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script> *@
     @await RenderSectionAsync("Scripts", required: false)

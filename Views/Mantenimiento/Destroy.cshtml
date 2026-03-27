@@ -1,0 +1,35 @@
+@model actividad01.Models.Mantenimiento
+
+<div class="mt-3 row">
+    <div class="col-sm-12 col-md-6">
+        <h4>Mantenimiento @Model.Marca</h4>
+    </div>
+    <div class="col-sm-12 col-md-6 text-end">
+        <a class="btn btn-sm btn-outline-primary" aria-current="page" asp-controller="Mantenimiento" asp-action="Index">
+            Ver listado
+        </a>
+    </div>
+    <div class="col-sm-12 col-md-12 mt-5">
+        <form
+            asp-action="DestroyAction"
+            asp-controller="Mantenimiento"
+            method="post"
+        >
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>¿Estas seguro de eliminar el mantenimiento?</h4>
+                    <input type="hidden" name="id" value="@Model.Id">
+                </div>
+
+                <div class="col-sm-12 text-end">
+                    <button
+                        type="submit"
+                        class="btn btn-sm btn-danger"
+                    >
+                        Eliminar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

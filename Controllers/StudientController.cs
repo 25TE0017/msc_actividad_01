@@ -1,13 +1,22 @@
 using System.Diagnostics;
+using actividad01.Data;
 using actividad01.Interface;
 using actividad01.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace actividad01.Controllers;
 
-public class StudientController(IAlumnoDireccion alumnoService) : Controller
+public class StudientController: Controller
 {
-    private readonly IAlumnoDireccion _IAlumno = alumnoService;
+    private readonly IAlumnoDireccion _IAlumno;
+    private readonly AppDbContext _context;
+
+    public StudientController(AppDbContext context, IAlumnoDireccion alumnoService)
+    {
+        _context = context;
+        _IAlumno = alumnoService;
+    }
 
     public IActionResult Index()
     {
@@ -45,31 +54,54 @@ public class StudientController(IAlumnoDireccion alumnoService) : Controller
     public IActionResult Register(AlumnoDireccionViewModel viewModel)
     {
         if (!ModelState.IsValid) return View(viewModel);
-        // List<AlumnoDireccionViewModel> alumnos = new List<AlumnoDireccionViewModel>();
-        // alumnos.Add(viewModel);
         _IAlumno.CrearRegistro(viewModel);
-
         return RedirectToAction("Consultar");
     }
 
     [HttpGet]
-    public IActionResult Consultar()
+    public async Task<IActionResult> Consultar()
     {
-        // Alumno a1 = new Alumno{NoControl = "25TE001", Nombre = "A1"};
-        // Alumno a2 = new Alumno{NoControl = "25TE002", Nombre = "A2"};
-        // Alumno a3 = new Alumno{NoControl = "25TE003", Nombre = "A3"};
+        try
+        {            
+            if (!await _context.Database.CanConnectAsync()) return View();
+            
+            var resultado = await _context.Database.ExecuteSqlRawAsync("SELECT 1");            
+            List<AlumnoDireccionViewModel> alumnos = _IAlumno.ConsultarRegistros();
+            
+            return View(alumnos);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            return View();
+        }
+    }
 
-        // Direcciones d1 = new Direcciones{Calle = "Av. puerto", CP = 10001};
-        // Direcciones d2 = new Direcciones{Calle = "Av. muelle", CP = 10002};
-        // Direcciones d3 = new Direcciones{Calle = "Av. abismo", CP = 10003};
+    [HttpGet]
+    public async Task<IActionResult> Consultar2()
+    {
+        // List<AlumnoDireccionViewModel> alumnos = _IAlumno.ConsultarRegistros();
+        // return View(_IAlumno.ConsultarRegistros());
+        try
+        {
+            Console.WriteLine("OK");
+            // 1. Verificar conectividad básica
+            if (!await _context.Database.CanConnectAsync())
+            {
+                return View();
+            }
+            Console.WriteLine("OK");
 
-        // AlumnoDireccionViewModel r1 = new AlumnoDireccionViewModel{Alumno = a1, Direccion = d1};
-        // AlumnoDireccionViewModel r2 = new AlumnoDireccionViewModel{Alumno = a2, Direccion = d2};
-        // AlumnoDireccionViewModel r3 = new AlumnoDireccionViewModel{Alumno = a3, Direccion = d3};
-        // List<AlumnoDireccionViewModel> alumnos = new List<AlumnoDireccionViewModel>{r1, r2, r3};
-        List<AlumnoDireccionViewModel> alumnos = _IAlumno.ConsultarRegistros();
-
-        return View(alumnos);
+            // 2. Verificar que la base de datos existe y responde
+            var resultado = await _context.Database.ExecuteSqlRawAsync("SELECT 1");
+            Console.WriteLine(resultado);
+            
+            return View(_IAlumno.ConsultarRegistros());
+        }
+        catch (Exception ex)
+        {
+            return View();
+        }
     }
 
     [HttpGet]
