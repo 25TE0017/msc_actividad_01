@@ -1,8 +1,40 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Public
-*.txt
+# Publish
+*.Publish/
+*.pubxml.user
+*.pubxml.user.*
+/publish/
+
+# Web files
 wwwroot/files/
-*.png
-*.pdf
+
+# Logs
+*.log
+*.logs
+logs/
+log/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nupkg.metadata
+*.nupkg.sha512
+*.nupkg.sha512hash
+*.nuget.props
+*.nuget.targets
+*.nuget.cache
+NuGet.exe
+nuget.exe
+.nuget/
+
+# Certificates
+*.pfx
+*.p12
+*.snk
+*.pvk
+*.cer
+*.crt
+*.key
